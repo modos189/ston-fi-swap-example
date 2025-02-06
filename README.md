@@ -15,6 +15,8 @@ This project uses `@ton/ton` version 15.1.0 as it has been tested and verified t
 
 ## Installation
 
+### Standard Installation
+
 1. Clone the repository:
 ```bash
 git clone <repository-url>
@@ -33,6 +35,22 @@ MNEMONIC="your 24 word mnemonic phrase here"
 ```
 
 You can get your TON API key through the official Telegram bot: [@tonapibot](https://t.me/tonapibot)
+
+### Docker Installation
+
+1. Clone the repository and navigate to the project directory:
+```bash
+git clone <repository-url>
+cd <project-directory>
+```
+
+2. Run using Docker Compose:
+```bash
+# Run with environment variables
+TON_CLIENT_API_KEY=your_key MNEMONIC="your mnemonic" docker-compose up -d
+```
+
+The service will be available at `http://localhost:3000`.
 
 ## Scripts
 

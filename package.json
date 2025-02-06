@@ -1,5 +1,5 @@
 {
-  "name": "ton-grid-bot",
+  "name": "ston-fi-swap-example",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/main.js",
@@ -16,7 +16,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "@ston-fi/api": "^0.16.0",
