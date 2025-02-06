@@ -1,0 +1,43 @@
+{
+  "name": "ton-grid-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "rebuild": "npm run clean && npm run build",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test:price": "npx tsx src/services/price.service.ts",
+    "test:swap": "npx tsx src/services/swap.service.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@ston-fi/api": "^0.16.0",
+    "@ston-fi/sdk": "^2.2.1",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "15.1.0",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/node": "^22.13.0",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "eslint": "^9.19.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

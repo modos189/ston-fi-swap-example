@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                      // Поддержка современных возможностей JavaScript
+    "module": "NodeNext",                    // Используем ES-модули
+    "moduleResolution": "NodeNext",          // Улучшенная поддержка модулей в Node.js
+    "esModuleInterop": true,                 // Позволяет импортировать CommonJS модули
+    "resolveJsonModule": true,               // Разрешает импорт JSON файлов
+    "allowSyntheticDefaultImports": true,    // Упрощает работу с импортами
+    "strict": true,                          // Включает строгий режим TypeScript
+    "baseUrl": ".",                          // Указывает корень проекта
+    "skipLibCheck": true,                    // Пропускает проверку типов в библиотеках
+    "forceConsistentCasingInFileNames": true,// Учитывает регистр имен файлов
+    "outDir": "./dist",                      // Директория для скомпилированных файлов
+    "rootDir": "./src"                       // Корневая директория исходников
+  },
+  "include": ["src/**/*"],                   // Включаем все файлы из src
+  "exclude": ["node_modules", "dist"]        // Исключаем node_modules и dist
+}

@@ -1,0 +1,37 @@
+### Проверка здоровья сервиса
+GET http://localhost:3000/health
+
+### Получение цены пары токенов
+GET http://localhost:3000/api/v1/price/FPIBANK/TON
+
+### Симуляция покупки
+POST http://localhost:3000/api/v1/swap/simulate/buy
+Content-Type: application/json
+
+{
+  "tokenAddress": "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
+  "amount": 0.1,
+  "slippageTolerance": 0.01
+}
+
+### Симуляция продажи
+POST http://localhost:3000/api/v1/swap/simulate/sell
+Content-Type: application/json
+
+{
+  "tokenAddress": "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
+  "amount": 100.0,
+  "slippageTolerance": 0.01
+}
+
+### Выполнение покупки или продажи, передавая данные симуляции (пример)
+POST http://localhost:3000/api/v1/swap/execute
+Content-Type: application/json
+
+{
+  "simulation": {
+    "routerAddress": "your_router_address",
+    "offerUnits": "1000000000",
+    "minAskUnits": "900000000"
+  }
+}
